@@ -1,0 +1,16 @@
+<div *ngFor="let horse of horses$ | async; index as i; first as isFirst;" >
+  <div class="card text-white text-center h-100" *ngIf=isFirst>
+    <img [src]='horse.original' class="card-img" alt="persone image">
+    <div class="card-img-overlay d-flex flex-row justify-content-center">
+      <button type="button" class="btn btn-outline-danger btn-circle btn-lg mt-auto mx-3" (click)="dislike(horse)">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+      </button>
+      <button type="button" class="btn btn-outline-primary btn-circle btn-lg mt-auto mx-3" (click)="favourite(horse)">
+          <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+      </button>
+      <button type="button" class="btn btn-outline-success btn-circle btn-lg mt-auto mx-3 heart" (click)="like(horse)">
+          <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</div>

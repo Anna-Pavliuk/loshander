@@ -1,0 +1,41 @@
+<mat-tab-group>
+    <mat-tab label="Matches">
+        <div class="container">
+            <div class="row row-cols-3 g-4">
+                <div class="col" *ngFor="let horse of matches$ | async; index as i;">
+                <div class="card h-100">
+                    <img [src]="horse.original" class="card-img" alt="matches horse">
+                    <div class="card-img-overlay">
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </mat-tab>
+    <mat-tab label="Favourites">
+        <div class="container">
+            <div class="row row-cols-3 g-4">
+                <div class="col" *ngFor="let horse of favourites$ | async; index as i;">
+                <div class="card h-100">
+                    <img [src]="horse.original" class="card-img" alt="favourites horse">
+                    <div class="card-img-overlay">
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </mat-tab>
+    <mat-tab label="Dislikes">
+        <div class="container">
+            <div class="row row-cols-3 g-4">
+                <div class="col" *ngFor="let horse of dislikes$ | async; index as i;">
+                <div class="card h-100">
+                    <img [src]="horse.original" class="card-img" alt="dislikes horse">
+                    <div class="card-img-overlay">
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </mat-tab>
+</mat-tab-group>
